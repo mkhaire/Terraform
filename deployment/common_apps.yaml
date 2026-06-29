@@ -1,0 +1,7 @@
+apps:
+  - name: "app1"
+    id: 1
+  - name: "app2"
+    id: 2
+  - name: "app3"
+    id: 3
