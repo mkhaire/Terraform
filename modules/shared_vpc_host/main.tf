@@ -20,7 +20,7 @@ resource "google_compute_shared_vpc_host_project" "host" {
   project = var.host_project_id
 }
 
-# 3. Dynamic Subnet Generation for the 44 Applications
+# 3. Dynamic Subnet Generation for the Applications
 resource "google_compute_subnetwork" "app_subnets" {
   for_each      = { for app in var.apps : app.name => app }
   name          = "sb-${var.environment}-${each.value.name}"
